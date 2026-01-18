@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mood genertor</title>
+
+    <!-- Google Fonts: Playfair Display & Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Font Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Custom CSS for the workshop page -->
+<link rel="stylesheet" href="moodgenerator.css">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    
+    
+  <!-- ===================== HEADER / TOP NAVIGATION ===================== -->
+  <div class="top-nav">
+    <!-- Left controls: Language selector -->
+    <div class="left-controls">
+        <div class="language-dropdown" id="languageDropdown">
+            <i class="fa-solid fa-globe"></i> <!-- Globe icon for language -->
+            <div class="language-options" id="languageOptions">
+                <!-- Language options -->
+                <div data-lang="en">EN</div>
+                <div data-lang="fr">FR</div>
+                <div data-lang="ar">AR</div>
+            </div>
+        </div>
+    </div>
+    <!-- Logo in the center -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Artelier Logo">
+    </div>
+
+    <!-- Menu button for opening side menu on smaller screens -->
+    <button class="menu-btn" id="menuBtn">MENU</button>
+  </div>
+
+  <!-- ===================== SIDE MENU ===================== -->
+  <div class="menu-panel" id="menuPanel">
+    <!-- Close button to hide side menu -->
+    <button class="close-btn" id="closeBtn">&times;</button>
+
+    <!-- Menu links navigation -->
+    <div class="menu-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="shop_copy.html"><i class="fa-solid fa-store"></i> Shop</a>
+      <a href="Corporate_Services.html"><i class="fa-solid fa-briefcase"></i> Corporate Services</a>
+      <a href="art_workshop.html"><i class="fa-solid fa-palette"></i> Art Workshops</a>
+    </div>
+
+    <!-- Footer inside side menu with social links -->
+    <div class="menu-footer">
+      <div class="social-icons">
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+      <p>Stay connected with Artelier</p>
+    </div>
+  </div>
+
+<!-- ===================== MOOD GENERATOR SECTION ===================== -->
+<section class="mood-art-section">
+
+  <div class="mood-art-grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="mood-art-content">
+      <h2>🎨 Mood Art Generator</h2>
+      <p>Enter a mood and description, then click "Generate Art".</p>
+
+      <input type="text" id="moodInput" class="mood-input"
+             placeholder="Mood (e.g., happy, calm)">
+
+      <input type="text" id="descInput" class="mood-input"
+             placeholder="Description (optional)">
+
+      <button class="generate-btn" id="generateBtn">
+        Generate Art
+      </button>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="generated-art" id="generatedArt">
+      Your generated art will appear here...
+    </div>
+
+  </div>
+</section>
+
+
+  </div>
+</section>
+    <!-- Link to external JavaScript file for login functionality -->
+  <script src="moodgenerator.js"></script>
+</body>
+</html>

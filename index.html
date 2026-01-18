@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artelier – Creative Hero</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  
+<!-- ===================== DIALOGFLOW CHATBOT ===================== -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Artiler Art Supplies"
+  agent-id="c93c7ef3-7d68-418c-9118-412f80502ca2"
+  language-code="en"
+></df-messenger>
+
+
+<!-- ===================== LOADING SCREEN ===================== -->
+<div class="artelier-loader">
+  <div class="loader-bg"></div>
+
+  <!-- Glow animation circles -->
+  <div class="loader-glow glow1"></div>
+  <div class="loader-glow glow2"></div>
+  <div class="loader-glow glow3"></div>
+
+  <!-- Loader content (logo + title + bar) -->
+  <div class="loader-content">
+    <img src="images/logo.png" alt="Artelier Logo" class="loader-logo">
+    <h1>ARTELIER</h1>
+    <p>Where Creativity Comes Alive</p>
+    <div class="loader-progress">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===================== TOP NAVIGATION ===================== -->
+<div class="top-nav">
+  
+    <!-- Left controls: Language selector -->
+    <div class="left-controls">
+        <div class="language-dropdown" id="languageDropdown">
+            <i class="fa-solid fa-globe"></i> <!-- Globe icon for language -->
+                  <a href="moodgenerator.html" style="color: #fff;"><i class="fa-solid fa-wand-magic-sparkles magic-brush-icon""></i></a>
+
+            <div class="language-options" id="languageOptions">
+                <!-- Language options -->
+                <div data-lang="en">EN</div>
+                <div data-lang="fr">FR</div>
+                <div data-lang="ar">AR</div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Artelier Logo">
+  </div>
+
+  <!-- Menu Button (opens side menu) -->
+  <button class="menu-btn" id="menuBtn">MENU</button>
+</div>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero-section" id="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">
+      One Stop for All<br>
+      <span>Your Artistic Needs</span>
+    </h1>
+
+    <p class="hero-description">
+      A future-focused art supply experience for professionals,
+      students, and creators. Premium tools designed to turn
+      imagination into meaningful art.
+    </p>
+
+<a href="shop_copy.html">
+  <button class="paint-btn">Shop Now</button>
+</a>  
+</div>
+</section>
+
+
+<!-- SCROLLING GALLERY SECTION -->
+<section class="gallery-section">
+  <div class="scroll-gallery">
+    <img src="images/section_2.png" alt="">
+    <img src="images/section_3.png" alt="">
+    <img src="images/section_4.png" alt="">
+    <img src="images/section_5.png" alt="">
+    <img src="images/section_6.png" alt="">
+    <img src="images/section_7.png" alt="">
+
+    <!-- repeat images for infinite scroll -->
+    <img src="images/section_2.png" alt="">
+    <img src="images/section_3.png" alt="">
+    <img src="images/section_4.png" alt="">
+    <img src="images/section_5.png" alt="">
+    <img src="images/section_6.png" alt="">
+    <img src="images/section_7.png" alt="">
+  </div>
+</section>
+
+<!-- ===================== SIDE MENU PANEL ===================== -->
+<div class="menu-panel" id="menuPanel">
+
+  <!-- Close Button -->
+  <button class="close-btn" id="closeBtn">&times;</button>
+
+  <!-- Sidebar Links -->
+  <div class="menu-links">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="shop_copy.html"><i class="fa-solid fa-store"></i> Shop</a>
+    <a href="Corporate_Services.html"><i class="fa-solid fa-briefcase"></i> Corporate Services</a>
+    <a href="art_workshop.html"><i class="fa-solid fa-palette"></i> Art Workshops</a>
+  </div>
+
+  <!-- Social Icons -->
+  <div class="menu-footer">
+    <div class="social-icons">
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>Stay connected with Artelier</p>
+  </div>
+</div>
+
+
+<!-- ===================== FEATURES SECTION ===================== -->
+<section class="features">
+  <h2>Why Artists Love Artelier</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <div class="icon"><i class="fa-solid fa-brush"></i></div>
+      <h3>Premium Art Tools</h3>
+      <p>Hand-selected brushes, paints, and canvases designed for professional-quality results.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon"><i class="fa-solid fa-palette"></i></div>
+      <h3>Infinite Color Library</h3>
+      <p>Discover a vibrant spectrum of pigments crafted to capture every emotion and idea.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+      <h3>Creative Guidance</h3>
+      <p>Expert-led workshops, tutorials, and art challenges to inspire your next masterpiece.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+      <h3>Sustainable Materials</h3>
+      <p>Eco-conscious supplies that respect the environment without compromising quality.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon"><i class="fa-solid fa-users"></i></div>
+      <h3>Artist Community</h3>
+      <p>Connect, collaborate, and grow with a passionate community of fellow artists.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon"><i class="fa-solid fa-award"></i></div>
+      <h3>Trusted Quality</h3>
+      <p>Products tested and loved by professionals and art enthusiasts worldwide.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ===================== WHAT WE OFFER SECTION ===================== -->
+<section class="offer-section">
+  <h2>WHAT WE OFFER</h2>
+
+  <div class="offer-grid">
+
+    <!-- Single Offer Card -->
+    <div class="offer-card">
+      <div class="offer-img"><img src="images/poettry.jpg" alt=""></div>
+      <h3>Pottery & Ceramics <i class="fa-solid fa-arrow-right"></i></h3>
+    </div>
+
+    <div class="offer-card">
+      <div class="offer-img"><img src="images/artmaterial.jpg" alt=""></div>
+      <h3>Art Material <i class="fa-solid fa-arrow-right"></i></h3>
+    </div>
+
+    <div class="offer-card">
+      <div class="offer-img"><img src="images_corprate/section4_1.png" alt=""></div>
+      <h3>Printing & Framing <i class="fa-solid fa-arrow-right"></i></h3>
+    </div>
+
+    <div class="offer-card">
+      <div class="offer-img"><img src="images/fineart.jpg" alt=""></div>
+      <h3>Fine Art <i class="fa-solid fa-arrow-right"></i></h3>
+    </div>
+
+    <div class="offer-card">
+      <div class="offer-img"><img src="images/artworkshops.jpg" alt=""></div>
+      <h3>Art Workshops <i class="fa-solid fa-arrow-right"></i></h3>
+    </div>
+
+    <div class="offer-card">
+      <div class="offer-img"><img src="images/Cooperateart.jpg" alt=""></div>
+      <h3>Corporate Art Services <i class="fa-solid fa-arrow-right"></i></h3>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= INTERACTIVE SCROLLING BANNER ================= -->
+<section class="interactive-banner" id="banner">
+  <div class="banner-track" id="bannerTrack">
+    <!-- Repeated scrolling messages for animation -->
+    <div class="banner-text">Artelier Corporate Services ✦</div>
+    <div class="banner-text">Creative Partnerships ✦</div>
+    <div class="banner-text">Elevate Your Workspace ✦</div>
+    <div class="banner-text">Innovate Through Art ✦</div>
+    <div class="banner-text">Artelier Corporate Services ✦</div>
+    <div class="banner-text">Creative Partnerships ✦</div>
+    <div class="banner-text">Elevate Your Workspace ✦</div>
+    <div class="banner-text">Innovate Through Art ✦</div>
+  </div>
+</section>
+<!-- ===================== PRODUCT TABS SECTION ===================== -->
+<section class="product-section">
+
+  <h2>GLAZES & UNDERGLAZES</h2>
+  <p class="subtitle">
+    Polish your masterpiece with a variety of glazes and underglazes.
+  </p>
+
+  <!-- Tabs for category switching -->
+  <div class="tabs">
+    <button class="tab active" data-tab="underglazes">UNDERGLAZES</button>
+    <button class="tab" data-tab="highfire">HIGH FIRE GLAZES</button>
+    <button class="tab" data-tab="additives">GLAZE ADDITIVES AND AIDS</button>
+  </div>
+
+  <!-- Product Cards loaded dynamically -->
+  <div id="productContainer" class="product-grid"></div>
+
+  <!-- View all button -->
+  <div class="view-all">
+    <button>View All Products</button>
+  </div>
+
+</section>
+
+
+<!-- ===================== REVIEWS CAROUSEL ===================== -->
+<section class="reviewShowcase">
+  <h2>WHAT PEOPLE ARE SAYING</h2>
+
+  <div class="reviewTrackWrapper">
+
+    <!-- Navigation Buttons -->
+    <button class="reviewNavBtn reviewPrev">&#10094;</button>
+
+    <!-- Horizontal sliding review track -->
+    <div class="reviewTrack" id="reviewTrack">
+
+      <!-- Individual Review -->
+      <div class="singleReview">
+        <div class="reviewStars">★★★★★</div>
+        <h3>Nice Place</h3>
+        <p>“Nice place... calm when we visited.”</p>
+        <div class="reviewAuthor">Aisha Alyaarobi</div>
+      </div>
+
+      <div class="singleReview">
+        <div class="reviewStars">★★★★★</div>
+        <h3>Love it so much</h3>
+        <p>“Friendly service, great framing options...”</p>
+        <div class="reviewAuthor">Martin Kubler</div>
+      </div>
+
+      <div class="singleReview">
+        <div class="reviewStars">★★★★★</div>
+        <h3>Buy it now</h3>
+        <p>“They did an amazing job mounting my tapestry...”</p>
+        <div class="reviewAuthor">Brian Stangle</div>
+      </div>
+
+      <div class="singleReview">
+        <div class="reviewStars">★★★★★</div>
+        <h3>Absolutely Stunning</h3>
+        <p>“The glazes I bought exceeded all expectations!”</p>
+        <div class="reviewAuthor">Sara Mahmoud</div>
+      </div>
+
+      <div class="singleReview">
+        <div class="reviewStars">★★★★★</div>
+        <h3>Exceptional Service</h3>
+        <p>“Customer service is excellent... eco-friendly too!”</p>
+        <div class="reviewAuthor">Omar K.</div>
+      </div>
+
+      <div class="singleReview">
+        <div class="reviewStars">★★★★★</div>
+        <h3>Beautiful Results</h3>
+        <p>“My ceramic glazes look vibrant and professional.”</p>
+        <div class="reviewAuthor">Lina Farouq</div>
+      </div>
+
+    </div>
+
+    <!-- Right Navigation -->
+    <button class="reviewNavBtn reviewNext">&#10095;</button>
+
+  </div>
+</section>
+
+
+<!-- ===================== CORPORATE SERVICE SHOWCASE ===================== -->
+<section class="corporateCreativeSection">
+
+  <div class="corporateHeader">
+    <h2>CORPORATE SERVICES</h2>
+    <p>We are an end-to-end creative services team — from concept to delivery.</p>
+  </div>
+
+  <div class="corporateContentWrapper">
+
+    <!-- Image Frame -->
+    <div class="corporateImageContainer">
+      <div class="corporateImageFrame">
+        <img src="images/corporate-art.jpg" alt="Corporate Art Service">
+      </div>
+    </div>
+
+    <!-- Description Text -->
+    <div class="corporateTextArea">
+      <p>At Art Central Studios, we specialize in producing custom, bespoke paintings and installations...</p>
+      <button class="corporateBtn">Learn More</button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===================== CONTACT SECTION ===================== -->
+<section id="creative-contact">
+
+  <div class="contact-title">
+    <h2>Contact Our Creative Team</h2>
+    <p>We’re always open to collaborations or commissions — reach out anytime.</p>
+  </div>
+
+  <div class="contact-container">
+
+    <!-- Contact Info -->
+    <div class="contact-details">
+
+      <div class="detail-block">
+        <h3>Office Location</h3>
+        <div class="detail-item"><i class="fas fa-map-marker-alt"></i> Dubai Design District, UAE</div>
+      </div>
+
+      <div class="detail-block">
+        <h3>Call Us Anytime</h3>
+        <div class="detail-item"><i class="fas fa-phone"></i> Mobile: +971-55-7245724</div>
+        <div class="detail-item"><i class="fab fa-whatsapp"></i> WhatsApp: +971-56-1835783</div>
+        <div class="detail-item"><i class="fas fa-phone-alt"></i> Landline: +971-4-3211277</div>
+      </div>
+
+      <div class="detail-block">
+        <h3>Send Mail</h3>
+        <div class="detail-item"><i class="fas fa-envelope"></i> info@artelierstudio.com</div>
+        <div class="detail-item"><i class="fas fa-envelope-open"></i> sales@artelierstudio.com</div>
+      </div>
+
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper">
+<form id="creative-contact-form" novalidate>
+
+  <input 
+    type="text"
+    id="contact-name"
+    name="name"
+    placeholder="Your Name"
+    autocomplete="name"
+    required
+  >
+
+  <input 
+    type="email"
+    id="contact-email"
+    name="email"
+    placeholder="Your Email"
+    autocomplete="email"
+    required
+  >
+
+  <input 
+    type="text"
+    id="contact-subject"
+    name="subject"
+    placeholder="Subject"
+    autocomplete="off"
+  >
+
+  <input 
+    type="text"
+    id="contact-phone"
+    name="phone"
+    placeholder="Phone (optional)"
+    autocomplete="tel"
+  >
+
+  <textarea 
+    id="contact-message"
+    name="message"
+    placeholder="Message"
+    rows="5"
+    autocomplete="off"
+    required
+  ></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===================== MAP LOCATION SECTION ===================== -->
+<section id="creative-map">
+
+  <h3>Find
+     Us on the Map</h3>
+
+  <div class="map-container">
+    <iframe 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.482997377263!2d55.31748851501116!3d25.18596748389902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4337e9a5b38b%3A0x93b2a4e3f00b2d41!2sDubai%20Design%20District!5e0!3m2!1sen!2sae!4v1709388765672!5m2!1sen!2sae" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+</section>
+
+  <!-- FOOTER -->
+  <footer class="untold-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h1 class="footer-title">Artiler</h1>
+        <img src="images/drawing.png" alt="Drawing" class="footer-drawing">
+      </div>
+
+      <div class="footer-numbers" aria-hidden="true">
+        <div class="num">01</div>
+        <div class="num">02</div>
+        <div class="num">03</div>
+        <div class="num">04</div>
+        <div class="num">05</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html" data-text="Home">Home</a>
+        <a href="shop.html" data-text="Shop">Shop</a>
+        <a href="Corporate_Services.html" data-text="Corporate Services">Corporate Services</a>
+        <a href="art_workshop.html" data-text="Art Workshops">Art Workshops</a>
+        <a href="login.html" data-text="Log In / Sign Up">Log In / Sign Up</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="bottom-left">
+        <a href="#">POLÍTICA DE PRIVACIDADE</a>
+        <a href="#">TERMOS E CONDIÇÕES</a>
+        <div class="lang-selector"><span>( PT )</span> <span class="arrow">▼</span></div>
+      </div>
+      <div class="bottom-right">
+        <span>SIGA-NOS</span>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+                <!-- Icons --> 
+                 <script src="https://kit.fontawesome.com/2f5a64dfc6.js" crossorigin="anonymous"></script>
+
+<!-- ===================== SCRIPT ===================== -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artelier</title>
+
+<!-- Google Fonts: Playfair Display & Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Font Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- Custom CSS for the workshop page -->
+<link rel="stylesheet" href="art_workshop.css">
+</head>
+<body>
+
+
+
+
+<!-- ================= HEADER / NAVBAR ================= -->
+<div class="top-nav">
+    <!-- Left controls: Language selector -->
+    <div class="left-controls">
+        <div class="language-dropdown" id="languageDropdown">
+            <i class="fa-solid fa-globe"></i> <!-- Globe icon for language -->
+                  <a href="moodgenerator.html" style="color: #fff;"><i class="fa-solid fa-wand-magic-sparkles magic-brush-icon""></i></a>
+
+            <div class="language-options" id="languageOptions">
+                <!-- Language options -->
+                <div data-lang="en">EN</div>
+                <div data-lang="fr">FR</div>
+                <div data-lang="ar">AR</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="images/logo.png" alt="Artelier Logo">
+    </div>
+
+    <!-- Menu button for side panel -->
+    <button class="menu-btn" id="menuBtn">MENU</button>
+</div>
+
+<!-- ================= SIDE MENU ================= -->
+<div class="menu-panel" id="menuPanel">
+    <!-- Close button -->
+    <button class="close-btn" id="closeBtn">&times;</button>
+
+    <!-- Menu links -->
+    <div class="menu-links">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="shop_copy.html"><i class="fa-solid fa-store"></i> Shop</a>
+        <a href="Corporate_Services.html"><i class="fa-solid fa-briefcase"></i> Corporate Services</a>
+        <a href="contact_us.html"><i class="fa-solid fa-palette"></i> Art Workshops</a>
+    </div>
+
+    <!-- Social media & footer -->
+    <div class="menu-footer">
+        <div class="social-icons">
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>Stay connected with Artelier</p>
+    </div>
+</div>
+
+<!-- ================= SLIDER ================= -->
+<div class="slider-container" id="slider">
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image: url('images_art_workshop/Acrylic_Painting_Workshop.png');">
+        <div class="overlay"></div> <!-- Dark overlay for readability -->
+        <div class="title" onclick="nextSlide()">Acrylic Painting Workshop
+            <div class="line"></div> <!-- Decorative line under title -->
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image: url('images_art_workshop/Hand_building_Art_Workshop.png');">
+        <div class="overlay"></div>
+        <div class="title" onclick="nextSlide()">Hand building Art Workshop
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image: url('images_art_workshop/Kids_Painting_Workshop.png');">
+        <div class="overlay"></div>
+        <div class="title" onclick="nextSlide()">Kids Painting Workshop
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" style="background-image: url('images_art_workshop/Pottery_Workshop_for_Kids.png');">
+        <div class="overlay"></div>
+        <div class="title" onclick="nextSlide()">Pottery Workshop for Kids
+            <div class="line"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= CARD SECTION ================= -->
+<section class="card-section">
+    <!-- Section title -->
+    <h2 id="sectionTitle">Our Workshops</h2>
+    <div class="line"></div>
+    <p id="sectionDesc">Explore our creative workshops and unleash your artistic potential.</p>
+
+    <!-- Cards container -->
+    <div class="cards-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="images_art_workshop/Acrylic_Painting_Workshop.png" alt="Acrylic Painting">
+            <div class="card-content">
+                <h3 class="cardTitle">Acrylic Painting</h3>
+                <p class="cardDesc">Learn to create vibrant acrylic artworks step by step.</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="images_art_workshop/Hand_building_Art_Workshop.png" alt="Hand Building Art">
+            <div class="card-content">
+                <h3 class="cardTitle">Hand Building Art</h3>
+                <p class="cardDesc">Explore the techniques of hand-building creative art pieces.</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="images_art_workshop/Kids_Painting_Workshop.png" alt="Kids Painting">
+            <div class="card-content">
+                <h3 class="cardTitle">Kids Painting</h3>
+                <p class="cardDesc">Fun painting workshops specially designed for children.</p>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="images_art_workshop/Pottery_Workshop_for_Kids.png" alt="Pottery Workshop">
+            <div class="card-content">
+                <h3 class="cardTitle">Pottery Workshop</h3>
+                <p class="cardDesc">Hands-on pottery experience for kids to enjoy and learn.</p>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="images_art_workshop/islamic_Art_Workshop.png" alt="Islamic Art">
+            <div class="card-content">
+                <h3 class="cardTitle">Islamic Art</h3>
+                <p class="cardDesc">Explore the beauty of Islamic art with creative techniques.</p>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="images_art_workshop/Watercolor_Workshop.png" alt="Watercolor">
+            <div class="card-content">
+                <h3 class="cardTitle">Watercolor</h3>
+                <p class="cardDesc">Learn delicate watercolor painting skills for stunning results.</p>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <img src="images_art_workshop/Drawing_Workshop.png" alt="Drawing">
+            <div class="card-content">
+                <h3 class="cardTitle">Drawing Workshop</h3>
+                <p class="cardDesc">Master pencil and charcoal drawing techniques creatively.</p>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <img src="images_art_workshop/Clay_Sculpture_Workshop.png" alt="Clay Sculpture">
+            <div class="card-content">
+                <h3 class="cardTitle">Clay Sculpture</h3>
+                <p class="cardDesc">Create amazing clay sculptures in hands-on sessions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===================== WORKSHOP MODAL ===================== -->
+<div class="workshop-modal" id="workshopModal">
+    <div class="modal-content">
+        <span class="close-btn" id="modalClose">&times;</span>
+        <img src="" alt="Workshop Image" id="modalImage">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <a href="#" id="modalLink" class="register-btn">Register Now</a>
+    </div>
+</div>
+
+<!-- ===================== REGISTRATION MODAL ===================== -->
+<div class="registration-modal" id="registrationModal">
+    <div class="modal-content">
+        <span class="close-btn" id="registerClose">&times;</span>
+        <h3>Register for Workshop</h3>
+        <p>Enter your details to secure your spot!</p>
+        <input type="text" id="regName" placeholder="Your Name">
+        <input type="email" id="regEmail" placeholder="Your Email">
+        <button id="submitRegister" class="register-btn">Submit</button>
+        <p id="registerMsg" style="margin-top:10px;color:green;"></p>
+    </div>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="untold-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h1 class="footer-title">Artiler</h1>
+        <img src="images/drawing.png" alt="Drawing" class="footer-drawing">
+      </div>
+
+      <div class="footer-numbers" aria-hidden="true">
+        <div class="num">01</div>
+        <div class="num">02</div>
+        <div class="num">03</div>
+        <div class="num">04</div>
+        <div class="num">05</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html" data-text="Home">Home</a>
+        <a href="shop.html" data-text="Shop">Shop</a>
+        <a href="Corporate_Services.html" data-text="Corporate Services">Corporate Services</a>
+        <a href="art_workshop.html" data-text="Art Workshops">Art Workshops</a>
+        <a href="login.html" data-text="Log In / Sign Up">Log In / Sign Up</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="bottom-left">
+        <a href="#">POLÍTICA DE PRIVACIDADE</a>
+        <a href="#">TERMOS E CONDIÇÕES</a>
+        <div class="lang-selector"><span>( PT )</span> <span class="arrow">▼</span></div>
+      </div>
+      <div class="bottom-right">
+        <span>SIGA-NOS</span>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+                <!-- Icons --> 
+                 <script src="https://kit.fontawesome.com/2f5a64dfc6.js" crossorigin="anonymous"></script>
+
+<!-- Custom JS for interactivity (menu, slider, etc.) -->
+<script src="art_workshop.js"></script>
+
+</body>
+</html>

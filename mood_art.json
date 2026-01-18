@@ -1,0 +1,58 @@
+[
+  {
+    "mood": "happy",
+    "type": "Vibrant Pop Art",
+    "colors": ["#f6d32d","#ffb347","#6bcB77","#3e64ff","#ff7e5f"],
+    "exampleImage": "https://i.postimg.cc/jjqfLQ8C/Chat-GPT-Image-Jan-15-2026-02-26-45-AM.png",
+    "title": "Sunshine Smile"
+  },
+  {
+    "mood": "calm",
+    "type": "Soft Watercolor",
+    "colors": ["#4d96ff","#a0c4ff","#b0e0e6","#ffd93d","#ffb347"],
+    "exampleImage": "https://i.postimg.cc/NfTmV094/Chat-GPT-Image-Jan-15-2026-02-27-45-AM.png",
+    "title": "Peaceful Waves"
+  },
+  {
+    "mood": "Sad",
+    "type": "Dynamic Neon Art",
+    "colors": ["#ff6f61","#f6d32d","#3e64ff","#ffb347","#ff7e5f"],
+    "exampleImage": "https://i.postimg.cc/Z58nPB96/Chat-GPT-Image-Jan-15-2026-02-30-40-AM.png",
+    "title": "Electric Pulse"
+  },
+  {
+    "mood": "dreamy",
+    "type": "Surreal Fantasy",
+    "colors": ["#8e44ad","#f39c12","#3498db","#1abc9c","#e67e22"],
+    "exampleImage": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60",
+    "title": "Cloud Wanderer"
+  },
+  {
+    "mood": "melancholic",
+    "type": "Moody Digital",
+    "colors": ["#2c3e50","#34495e","#7f8c8d","#95a5a6","#bdc3c7"],
+    "exampleImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60",
+    "title": "Rainy Thoughts"
+  },
+  {
+    "mood": "excited",
+    "type": "Explosive Abstract",
+    "colors": ["#e74c3c","#f1c40f","#27ae60","#2980b9","#9b59b6"],
+    "exampleImage": "https://images.unsplash.com/photo-1593642634311-18a3a9b6e76f?auto=format&fit=crop&w=800&q=60",
+    "title": "Fireworks Mind"
+  },
+  {
+    "mood": "nostalgic",
+    "type": "Vintage Collage",
+    "colors": ["#d35400","#e67e22","#f39c12","#c0392b","#7f8c8d"],
+    "exampleImage": "https://images.unsplash.com/photo-1516910817561-43f325b103f5?auto=format&fit=crop&w=800&q=60",
+    "title": "Old Memories"
+  },
+  {
+    "mood": "focused",
+    "type": "Geometric Minimalism",
+    "colors": ["#1abc9c","#16a085","#2ecc71","#27ae60","#3498db"],
+    "exampleImage": "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=60",
+    "title": "Sharp Vision"
+  }
+]

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Artiler Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <!-- Google Fonts: Playfair Display & Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Font Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="shop_copy.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <!-- LEFT -->
+  <div class="nav-left">
+    <i class="fa-solid fa-globe nav-icon"></i>
+
+    <a href="moodgenerator.html">
+      <i class="fa-solid fa-wand-magic-sparkles nav-icon"></i>
+    </a>
+  </div>
+
+  <!-- CENTER LOGO -->
+  <div class="nav-center">
+    <img src="images/logo.png" alt="Logo" class="nav-logo">
+  </div>
+
+  <!-- RIGHT -->
+  <div class="nav-right">
+    <div class="cart-icon" id="cartIcon">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="cartCount">0</span>
+    </div>
+  </div>
+  <!-- CART DROPDOWN --> 
+   <div class="cart-dropdown" id="cartDropdown"><div id="cartView">
+     <h3>Your Cart</h3> 
+     <div id="cartItems">
+      <p>Your cart is empty</p>
+     </div> <p class="total">Total: $<span id="total">0</span></p> <button class="checkout-btn" onclick="openCheckout()">Checkout</button> </div>
+
+  <!-- CART DROPDOWN -->
+  <div class="cart-dropdown" id="cartDropdown">
+    <!-- your existing cart dropdown content -->
+  </div>
+    <div id="paymentView">
+      <h3>Payment</h3>
+      <div class="pay-switch">
+        <button class="active" data-pay="card" onclick="switchPay('card', this)">Card</button>
+        <button data-pay="cash" onclick="switchPay('cash', this)">Cash</button>
+      </div>
+      <div class="payment-card" id="paymentCard">
+        <input placeholder="Card Number">
+        <div class="row">
+          <input placeholder="MM/YY">
+          <input placeholder="CVC">
+        </div>
+        <input placeholder="Card Holder">
+      </div>
+      <div class="cash-msg" id="cashMsg">
+        <h4>Payment by Cash 💛</h4>
+        <p>Thank you & come again</p>
+      </div>
+      <button class="checkout-btn" onclick="openLocation()">Confirm</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>SHOP</h1>
+  </div>
+</header>
+
+
+<div class="title-wrapper">
+  <h1>Find Your Perfect Art Tool</h1>
+  <div class="subtitle">Luxury collection — hover the cards, try filters, click ADD to see the UI in action.</div>
+</div>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- FILTER AS CARDS -->
+  <aside class="filter">
+    <div class="filter-card active" onclick="filterProducts('all', this)">
+      <img src="images_shop/Gouache Paint & Tool Small Art Set.png">
+      <span>All</span>
+    </div>
+    <div class="filter-card" onclick="filterProducts('canvas', this)">
+      <img src="images_shop/CREATIVA CANVAS WITH EASEL 24X30CM.jpg">
+      <span>Canvas</span>
+    </div>
+    <div class="filter-card" onclick="filterProducts('brushes', this)">
+      <img src="images_shop/Art Asia Synthetic Triple Hair Flat Paintbrush - Set of 3.png">
+      <span>Brushes</span>
+    </div>
+    <div class="filter-card" onclick="filterProducts('colored_pencils', this)">
+      <img src="images_shop/MM Calligraph.png">
+      <span>Colored Pencils</span>
+    </div>
+    <div class="filter-card" onclick="filterProducts('markers', this)">
+      <img src="images_shop/40139 SILKSCREEN STENCIL.png">
+      <span>Markers</span>
+    </div>
+    <div class="filter-card" onclick="filterProducts('sketchbooks', this)">
+      <img src="images_shop/SKETCHPAD.jpg">
+      <span>Sketchbooks</span>
+    </div>
+  </aside>
+
+  <!-- SHOP GRID -->
+  <section class="shop" id="shop"></section>
+</div>
+
+<!-- OUT OF STOCK POPUP -->
+<div class="popup" id="stockPopup">
+  <div class="popup-box sad">
+    <h3>😢 Sorry</h3>
+    <p>This item is out of stock</p>
+    <button onclick="closeStockPopup()">OK</button>
+  </div>
+</div>
+
+<!-- LOCATION POPUP -->
+<div class="popup" id="locationPopup">
+  <div class="popup-box">
+    <h3>📍 Delivery Location</h3>
+    <input type="text" id="city" placeholder="City">
+    <input type="text" id="street" placeholder="Street">
+    <input type="text" id="flat" placeholder="Flat / Apartment">
+    <button onclick="finishOrder()">Finish Order</button>
+  </div>
+</div>
+
+
+
+  <!-- FOOTER -->
+  <footer class="untold-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h1 class="footer-title">Artiler</h1>
+        <img src="images/drawing.png" alt="Drawing" class="footer-drawing">
+      </div>
+
+      <div class="footer-numbers" aria-hidden="true">
+        <div class="num">01</div>
+        <div class="num">02</div>
+        <div class="num">03</div>
+        <div class="num">04</div>
+        <div class="num">05</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html" data-text="Home">Home</a>
+        <a href="shop.html" data-text="Shop">Shop</a>
+        <a href="Corporate_Services.html" data-text="Corporate Services">Corporate Services</a>
+        <a href="art_workshop.html" data-text="Art Workshops">Art Workshops</a>
+        <a href="login.html" data-text="Log In / Sign Up">Log In / Sign Up</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="bottom-left">
+        <a href="#">POLÍTICA DE PRIVACIDADE</a>
+        <a href="#">TERMOS E CONDIÇÕES</a>
+        <div class="lang-selector"><span>( PT )</span> <span class="arrow">▼</span></div>
+      </div>
+      <div class="bottom-right">
+        <span>SIGA-NOS</span>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- Fontawesome kit fallback -->
+  <script src="https://kit.fontawesome.com/2f5a64dfc6.js" crossorigin="anonymous"></script>
+<script src="shop_copy.js"></script>
+<script src="https://kit.fontawesome.com/2f5a64dfc6.js" crossorigin="anonymous"></script>
+</body>
+</html>

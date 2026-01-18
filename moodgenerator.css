@@ -1,0 +1,382 @@
+/* ===================== ROOT VARIABLES ===================== */
+:root {
+  --accent: #3e64ff;             /* Primary accent color */
+  --light: #ffffff;              /* Light/white color */
+  --dark: #0f0f0f;               /* Dark/black color */
+  --soft: rgba(255, 255, 255, 0.3); /* Soft translucent color for overlays */
+}
+
+/* ===================== GLOBAL RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;        /* Ensure padding/border included in width/height */
+}
+
+/* ===================== BODY STYLING ===================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;            /* Prevent horizontal scroll */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Blurred background image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('image_mood_genertator/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(3px);             /* Apply blur effect */
+  transform: scale(1);
+  z-index: -1;                   /* Send behind all content */
+}
+
+/* Dark overlay on background for better contrast */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+/* ===================== NAVBAR ===================== */
+.top-nav {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Logo styling and hover effect */
+.logo img {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.4s ease;
+}
+
+.logo img:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+/* ===================== LANGUAGE DROPDOWN ===================== */
+.language-dropdown { 
+    position: relative; 
+    display: inline-block; 
+    cursor: pointer; 
+    color: var(--light); 
+    font-size: 1.2rem; 
+}
+
+.language-dropdown i { 
+    padding: 6px 10px; 
+    background: var(--soft); 
+    border-radius: 8px; 
+}
+
+.language-dropdown i:hover { 
+    background: rgba(255,255,255,0.45); 
+}
+
+.language-options {
+    display: none;                       /* Hidden by default */
+    position: absolute; 
+    top: 40px; 
+    left: 0; 
+    background: white; 
+    color: black; 
+    min-width: 60px; 
+    border-radius: 6px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+    z-index: 10;                          /* Above other elements */
+}
+
+.language-options div { 
+    padding: 8px 12px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    transition: background 0.3s ease; 
+}
+
+.language-options div:hover { 
+    background: var(--accent); 
+    color: white; 
+}
+
+/* Menu button styling */
+.menu-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--light);
+  padding: 12px 22px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* ===================== SIDE MENU ===================== */
+.menu-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;                 /* Initially hidden off-screen */
+  width: 340px;
+  height: 100%;
+  backdrop-filter: blur(20px);   /* Glass-like blur effect */
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: right 0.6s cubic-bezier(0.77,0,0.175,1); /* Smooth slide-in */
+  z-index: 200;
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Slide menu into view when open */
+.menu-panel.open {
+  right: 0;
+}
+
+/* Menu links styling */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 60px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.menu-links a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 500;
+  opacity: 0;                     /* Hidden initially for animation */
+  transform: translateX(30px);
+  transition: 0.4s;
+}
+
+/* Underline animation on hover */
+.menu-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.menu-links a:hover::after {
+  width: 100%;
+}
+
+/* Animate links when menu opens */
+.menu-panel.open .menu-links a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hover effect for links */
+.menu-links a:hover {
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+/* Close button styling */
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+/* Footer in side menu */
+.menu-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  gap: 22px;
+  font-size: 1.4rem;
+}
+
+.social-icons a {
+  color: white;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.menu-footer p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Responsive side menu */
+@media(max-width: 768px) {
+  .menu-panel {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+/* ===================== MOOD GENERATOR SECTION ===================== */
+
+.mood-art-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 180px 60px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Two-column grid */
+.mood-art-grid {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* LEFT PANEL */
+.mood-art-content {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.mood-art-content h2 {
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.mood-art-content p {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Inputs */
+.mood-input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: 2px solid #f6d32d;
+  outline: none;
+  font-size: 1rem;
+}
+
+.mood-input:focus {
+  box-shadow: 0 0 15px rgba(246,211,45,0.4);
+}
+
+/* Button */
+.generate-btn {
+  margin-top: 10px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f6d32d, #3e64ff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.generate-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(246,211,45,0.6);
+}
+
+/* RIGHT PANEL */
+.generated-art {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 25px;
+  min-height: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.generated-art h3 {
+  margin: 10px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.colors-container {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 15px;
+}
+
+.colors-container div {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid white;
+}
+
+.generated-art img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-top: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .mood-art-grid {
+    grid-template-columns: 1fr;
+  }
+}

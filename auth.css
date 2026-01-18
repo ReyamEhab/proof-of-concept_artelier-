@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url("image_login/background.png") center/cover no-repeat;
+}
+
+/* DARK OVERLAY (LIKE IMAGE) */
+.overlay {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10%;
+}
+
+/* GLASS FORM */
+.form-glass {
+  width: 380px;
+  padding: 45px;
+  color: white;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* TEXT */
+h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #d6e2de;
+  margin-bottom: 30px;
+}
+
+/* INPUTS */
+label {
+  font-size: 13px;
+  color: #d6e2de;
+}
+
+input {
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #b8ccc6;
+}
+
+input:focus {
+  outline: none;
+  border-bottom-color: #ffffff;
+}
+
+/* OPTIONS */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.remember {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.forgot {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 14px;
+  background: #7c8c8c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #b4b7b1;
+}
+
+/* SWITCH */
+.switch-text {
+  margin-top: 22px;
+  font-size: 13px;
+  text-align: center;
+  color: #d6e2de;
+}
+
+.switch-text span {
+  font-weight: 600;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* MESSAGE */
+#message {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #b6ffeb;
+  text-align: center;
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
