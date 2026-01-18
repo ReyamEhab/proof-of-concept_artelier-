@@ -6,7 +6,6 @@ const products = [
   {id:1,title:"MM Calligraphy Set 33pc",category:"colored_pencils",price:12,stock:true,img:"images_shop/MM Calligraph.png"},
   {id:2,title:"Acrylic Paint Set of 36",category:"acrylic",price:200,stock:true,img:"images_shop/Acrylic Gouache Paint.png"},
   {id:3,title:"Gouache Paint",category:"colored_pencils",price:380,stock:false,img:"images_shop/LUK STUDIO GOUACHE 6X20ML SET.png"},
-  {id:4,title:"Lukas Watercolour 24",category:"watercolor",price:55,stock:true,img:"images_shop/Lukas Terzia Gouache Opaque Watercolour 24 Colours + 1 Tube White.png"},
   {id:5,title:"LUK GOUACHE 12X20ML",category:"watercolor",price:94,stock:false,img:"images_shop/LUK STUDIO GOUACHE 12X20ML STARTER SET.png"},
   {id:6,title:"Palette Pad 40 Sheets",category:"watercolor",price:40,stock:true,img:"images_shop/Disposable Palette Pad, 9 x 12 in, 40 Sheets - Pack of 1.png"},
   {id:7,title:"Gouache Paint Set",category:"watercolor",price:380,stock:true,img:"images_shop/Gouache Paint & Tool Small Art Set.png"},
@@ -209,3 +208,4 @@ function switchPay(type, btn){
 /* ================= INIT ================= */
 renderProducts(products);
 updateCart();
+
