@@ -69,5 +69,5 @@ actionBtn.addEventListener("click", async (e) => {
     message.textContent = "Server error";
   }
 });
-document.getElementById("actionBtn").onclick = function () {
-    window.location.href = "index.html";
+
+
