@@ -60,14 +60,15 @@ actionBtn.addEventListener("click", async (e) => {
     /* ✅ SAVE USER IN LOCALSTORAGE */
     localStorage.setItem("user", JSON.stringify(data.user));
 
-    setTimeout(() => {
-      window.location.href = "index.html"; // redirect to shop page
-    }, 1000);
+setTimeout(() => {
+  window.location.href = "index.html";
+}, 1000);
 
   } catch (err) {
     console.error(err);
     message.textContent = "Server error";
   }
 });
+
 
 
