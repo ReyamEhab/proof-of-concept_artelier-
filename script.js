@@ -42,7 +42,7 @@ document.addEventListener('mousemove', (e) => {
       ],
       additives: [
         { name: "Gloss Additive Medium", img: "images/add1.jpg", hover: "images/add1.jpg" },
-        { name: "Matte Finish Aid", img: "images/add2.jpg", hover: "images/add2.jpg" },
+        { name: "Gloss Additive Medium", img: "images/add1.jpg", hover: "images/add1.jpg" },
         { name: "Color Enhancer Gel", img: "images/add3.jpg", hover: "images/add3.jpg" },
         { name: "Texture Booster", img: "images/add4.jpg", hover: "images/add4.jpg" }
       ]
@@ -290,3 +290,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
